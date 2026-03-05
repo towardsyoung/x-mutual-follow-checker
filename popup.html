@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X 互关检测器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 280px;
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      padding: 16px;
+      border-bottom: 1px solid #21262d;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-icon {
+      font-size: 22px;
+    }
+
+    .header-info h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #e6edf3;
+    }
+
+    .header-info p {
+      font-size: 11px;
+      color: #8b949e;
+      margin-top: 2px;
+    }
+
+    .content {
+      padding: 14px 16px;
+    }
+
+    .tip-box {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .tip-box .tip-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1d9bf0;
+      margin-bottom: 8px;
+    }
+
+    .tip-box ol {
+      padding-left: 16px;
+      color: #8b949e;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .tip-box ol li strong {
+      color: #e6edf3;
+    }
+
+    .go-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 10px;
+      background: #1d9bf0;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .go-btn:hover {
+      background: #1a8cd8;
+    }
+
+    .warning {
+      margin-top: 12px;
+      background: rgba(240, 185, 11, 0.08);
+      border: 1px solid rgba(240, 185, 11, 0.2);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: #f0b90b;
+      line-height: 1.6;
+    }
+
+    .footer {
+      padding: 10px 16px;
+      border-top: 1px solid #21262d;
+      text-align: center;
+      font-size: 11px;
+      color: #484f58;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-icon">🔍</div>
+    <div class="header-info">
+      <h1>X 互关检测器</h1>
+      <p>检测谁没有回关你</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tip-box">
+      <div class="tip-title">📖 使用方法</div>
+      <ol>
+        <li>登录 X 账号</li>
+        <li>进入 <strong>「关注列表」</strong> 页面</li>
+        <li>点击顶部 <strong>「🔍 互关检查」</strong> 按钮</li>
+        <li>等待扫描完成，黄色背景 = 未回关</li>
+        <li>点击 <strong>「🗑️ 一键取关」</strong> 取关（带随机延迟）</li>
+      </ol>
+    </div>
+
+    <a id="go-btn" class="go-btn" href="#" target="_blank">
+      🚀 前往我的关注列表
+    </a>
+
+    <div class="warning">
+      ⚠️ 取关采用模拟人工操作，带随机延迟。建议单次不超过 50 个，避免触发风控。
+    </div>
+  </div>
+
+  <div class="footer">X 互关检测器 v1.0.0</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
